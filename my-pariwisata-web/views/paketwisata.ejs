@@ -1,0 +1,13 @@
+<%- include ('master' , {
+    title: title,
+    body: `<h1> Paket wisata</h1>
+
+<p>.....</p>
+`
+})
+%>
+<% listpaketwisata.forEach(paket=> { %>
+    <li>
+        <% paket.nama %> : Rp <% paket.harga %>
+    </li>
+    <% }) %>
