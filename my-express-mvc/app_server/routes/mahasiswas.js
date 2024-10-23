@@ -1,7 +1,11 @@
-const express = require("express");
+const mhsController = require('../controllers/controllerMahasiswa'); 
+const express = require('express');
 const router = express.Router();
-const mahasiswaController = require("../controllers/controllerMahasiswa");
 
-// Fungsi dan rute index kita gunakan untuk memanggil semua data dalam database MongoDB
-router.get("/mahasiswa", mahasiswaController.Index);
+router.get("/", mhsController.index); 
+router.post("/insert", mhsController.insert);
+router.patch("/update/:id", mhsController.update); 
+router.get("/show/:id", mhsController.show);
+router.delete("/delete/:id", mhsController.destroy); 
+
 module.exports = router;
