@@ -4,7 +4,7 @@ const index = (req, res) => {
 }; 
 //Controller kontak 
 const kontak =(req,res) => {
-    res.render('kontak',{title: 'Ini Halaman kontak'});
+    res.render('kontak',{title: 'Ini merupakan Halaman kontak'});
 };
 
 const profil =(req,res) => {
