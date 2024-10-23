@@ -3,28 +3,20 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Beranda' });
 });
 
-
 router.get('/paketwisata', function(req, res, next) {
-  let.paketwisata = [
-    {'nama' : 'wisata pulau kemarau', 'harga' :50000},
-    {'nama' : 'wisata punti kayu', 'harga' :10000},
-    {'nama' : 'wisata jakabaring', 'harga' :20000},
-  ]
-  res.render('paketwisata' , {
-    title: 'paket wisata',
-    listpaketwisata: listpaketwisata
-  });
+  res.render('paketwisata', { title: 'Paket Wisata' });
 });
 
 router.get('/orderpaket', function(req, res, next) {
-  res.send(' orderpaket',{title: 'form pemesanan paket wisata'});
+  res.render('orderpaket', { title: 'Pemesanan Paket Wisata' });
 });
 
-router.get('/orderdetail', function(req, res, next) {
-  res.send(' orderdetail',{title: 'detail pemesanan paket'});
+router.post('/orderdetail', function(req, res, next) {
+  res.render('orderdetail', { title: 'Detail Pemesanan Paket Wisata' });
 });
+
 
 module.exports = router;
