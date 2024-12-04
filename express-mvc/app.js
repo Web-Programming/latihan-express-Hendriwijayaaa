@@ -1,5 +1,3 @@
-require("./app_server/configs/passport"); 
-require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -7,8 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 //load mongodb db connection
 require('./app_server/models/db');
-require("./app_server/configs/passport"); //load file config
-
 
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
